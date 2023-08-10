@@ -4,13 +4,15 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2023-08-10 15:40:07
- * @LastEditTime: 2023-08-10 16:04:01
+ * @LastEditTime: 2023-08-10 16:09:09
  * @FilePath: /open3d-learning/README.md
 -->
 # open3d-learning(python)
 open3d Point cloud processing and visualization(点云处理和可视化)
 
-> version: open3d==0.15.2
+docs: https://www.yuque.com/huangzhongqing/rx5ufe(正在撰写，暂未公开)
+
+> version: open3d==0.15.2（不同版本的API大致相同，如果运行报错，查看你当前版本对应函数）
 
 Tips:
 * 本仓库主要是python版本，c++版本，在这个[c++](c++)子文件夹里
