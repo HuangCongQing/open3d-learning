@@ -1,10 +1,10 @@
 '''
-Description: 我们使用compute_convex_hull()方法计算了第一个点云的凸包。最后，我们使用is_point_inside()方法判断第二个点云的第一个点是否在凸包内。
+Description: 我们使用compute_convex_hull()方法计算点云的凸包。https://www.yuque.com/huangzhongqing/rx5ufe/zdaf10s1tuzb47ey#zqca3
 Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2023-08-10 16:56:09
-LastEditTime: 2023-08-10 16:57:54
+LastEditTime: 2023-08-10 17:28:47
 FilePath: /open3d-learning/point_cloud_processing/10进阶操作实践/01判断点云是否在凸包内.py
 '''
 

@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2023-08-10 15:40:07
- * @LastEditTime: 2023-08-10 16:09:09
+ * @LastEditTime: 2023-08-10 17:30:16
  * @FilePath: /open3d-learning/README.md
 -->
 # open3d-learning(python)
@@ -29,10 +29,10 @@ Tips:
     * 最近邻搜索
     
 * [04常见数据处理方法](04常见数据处理方法)
-    * AABB和OBB包围框计算
+    * [AABB和OBB包围框计算](point_cloud_processing/04常见数据处理方法/计算点云包围盒与凸包.py)
     * 
 * [05表面重建](05表面重建)
-    * 凸包
+    * [凸包](point_cloud_processing/05表面重建/计算点云包围盒与凸包.py)
 * [06体素化](06体素化)
 * [07点云分割(聚类)](07点云聚类分割)
     * DBSCAN聚类
@@ -46,6 +46,7 @@ Tips:
     * 目标检测任务
     * 语义分割任务
     * 加速计算
+    * [01判断点云是否在凸包内](point_cloud_processing/10进阶操作实践/01判断点云是否在凸包内.py)
 
 
 ## 2 Visualization(可视化)
