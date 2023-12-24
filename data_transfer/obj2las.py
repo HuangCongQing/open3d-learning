@@ -67,7 +67,6 @@ def save_las(points, save_las_file):
     # 保存las文件
     las.write(save_las_file)
 
-
 # 参考: https://blog.csdn.net/technology_cat/article/details/114841707
 def load_obj(obj_path, isGetStructure=False):
     points = []
@@ -137,7 +136,6 @@ def load_obj(obj_path, isGetStructure=False):
         return points, face_vertex, face_normal, face_texture, vn, vt, triangled
     else:
         return points
-
 
 def get_lib_version(lib):
     print('current open3d version: ', lib.__version__)
