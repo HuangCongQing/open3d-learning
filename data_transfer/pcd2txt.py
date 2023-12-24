@@ -4,12 +4,13 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2023-12-24 21:36:36
-LastEditTime: 2023-12-24 21:51:46
+LastEditTime: 2023-12-24 22:02:42
 FilePath: /open3d-learning/data_transfer/pcd2txt.py
 '''
 import open3d as o3d
 import numpy as np
 
+print('current open3d version: ', o3d.__version__)
 # 读取pcd点云文件
 point_cloud = o3d.io.read_point_cloud("/home/hcq/pointcloud/open3d-learning/test_data/pcd/table.pcd")
 
