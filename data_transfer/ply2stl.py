@@ -4,7 +4,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2023-12-24 23:42:35
-LastEditTime: 2023-12-25 00:25:30
+LastEditTime: 2023-12-25 00:29:46
 FilePath: /open3d-learning/data_transfer/ply2stl.py
 '''
 
@@ -40,11 +40,19 @@ def read_triangle_mesh(path):
 def ply_to_stl(ply_file, stl_file):
     # 读取PLY点云文件
     pcd = o3d.io.read_point_cloud(ply_file)
-    points = pcd.points
+    # points = pcd.points
+      
+    # 估计法线 bugfix: [OrientNormalsToAlignWithDirection] No normals in the PointCloud. Call EstimateNormals() first.
+    pcd.estimate_normals()  
+         
+    # 计算法线  
+    pcd.orient_normals_to_align_with_direction([0, 0, 1])  # 将法线对齐到z轴  
+    pcd.orient_normals_towards_camera_location([0, 0, 0])  # 将法线指向相机位置（这里是一个示例，您可以根据需要进行调整）  
+  
 
     # 创建三角网格
     mesh = o3d.geometry.TriangleMesh()
-    mesh.vertices = o3d.utility.Vector3dVector(points)
+    mesh.vertices = o3d.utility.Vector3dVector(pcd.points)
     mesh.triangles = o3d.utility.Vector3iVector([(1, 2, 3), (4, 5, 6), (7, 8, 9)])    # 这里需要填写自定义的三角形索引
 
 
