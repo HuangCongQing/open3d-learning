@@ -4,7 +4,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2023-12-24 23:42:35
-LastEditTime: 2023-12-25 01:23:31
+LastEditTime: 2023-12-25 01:44:09
 FilePath: /open3d-learning/data_transfer/ply2stl.py
 '''
 
@@ -55,9 +55,12 @@ def ply_to_stl(ply_file, stl_file):
 
     # 创建三角网格
     mesh = o3d.geometry.TriangleMesh()
+    mesh.compute_triangle_normals(normalized=False) # 计算三角形网格中每个三角形的法线，并将其存储在mesh.triangle_normals属性中。
+    # mesh = o3d.geometry.TriangleMesh.compute_triangle_normals(mesh)
     mesh.vertices = o3d.utility.Vector3dVector(pcd.points)
     # mesh.triangles = o3d.utility.Vector3iVector([(1, 2, 3), (4, 5, 6), (7, 8, 9)])    # 这里需要填写自定义的三角形索引
-    mesh.triangles = o3d.utility.Vector3iVector([])    # 这里需要填写自定义的三角形索引
+    # mesh.triangles = o3d.utility.Vector3iVector([])    # 这里需要填写自定义的三角形索引
+    # mesh.triangles = o3d.utility.Vector3iVector([(1,2,3) for i in range(np.asarray(pcd.points).shape[0])])    # 这里需要填写自定义的三角形索引
 
 
     # 添加注释
