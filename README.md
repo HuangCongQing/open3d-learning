@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2023-08-10 15:40:07
- * @LastEditTime: 2023-08-10 17:30:16
+ * @LastEditTime: 2023-12-24 16:56:16
  * @FilePath: /open3d-learning/README.md
 -->
 # open3d-learning(python)
@@ -12,7 +12,7 @@ open3d Point cloud processing and visualization(点云处理和可视化)
 
 docs: https://www.yuque.com/huangzhongqing/rx5ufe(正在撰写，暂未公开)
 
-> version: open3d==0.15.2（不同版本的API大致相同，如果运行报错，查看你当前版本对应函数）
+> version: **open3d==0.15.2**（不同版本的API大致相同，如果运行报错，查看你当前版本对应函数）
 
 Tips:
 * 本仓库主要是python版本，c++版本，在这个[c++](c++)子文件夹里
@@ -58,6 +58,15 @@ Tips:
 - matplolib [`python`]
 - rviz(ROS) topic可视化  [`c++`][`python`]
 - pcl 点云可视化 [`c++`]： [pcl-visualization可视化](https://github.com/HuangCongQing/pcl-learning/tree/master/15visualization%E5%8F%AF%E8%A7%86%E5%8C%96)
+
+
+### 3 点云数据格式转换(bag|.pcd|.bin|.ply|.txt|.npy|.las|.stl|.obj)）
+* doc: https://www.yuque.com/huangzhongqing/hre6tf/ck05ki
+* code: [data_transfer](data_transfer)
+
+
+
+
 
 
 ## Plus: [Open3Dc++](c++) TODO
