@@ -4,7 +4,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2023-12-24 16:48:39
-LastEditTime: 2023-12-24 17:30:26
+LastEditTime: 2023-12-24 17:33:15
 FilePath: /open3d-learning/data_transfer/obj2las.py
 '''
 import open3d as o3d
@@ -28,3 +28,8 @@ def convert_obj_to_las(obj_file, las_file):
 obj_file = "../test_data/obj/FinalBaseMesh.obj"
 las_file = "../test_data/obj/FinalBaseMesh_output.las"
 convert_obj_to_las(obj_file, las_file)
+
+'''  
+[Open3D WARNING] Unable to load file ../test_data/obj/FinalBaseMesh.obj with ASSIMP
+[Open3D WARNING] Write geometry::PointCloud failed: unknown file extension las for file ../test_data/obj/FinalBaseMesh_output.las.
+'''
