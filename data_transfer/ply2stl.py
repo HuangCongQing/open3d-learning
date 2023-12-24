@@ -1,10 +1,10 @@
 '''
-Description: ply2stl https://www.yuque.com/huangzhongqing/hre6tf/ck05ki#cteyh
+Description: ply2stl(虽然到处没有报错，但可能还有问题) https://www.yuque.com/huangzhongqing/hre6tf/ck05ki#cteyh
 Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2023-12-24 23:42:35
-LastEditTime: 2023-12-25 00:29:46
+LastEditTime: 2023-12-25 01:23:31
 FilePath: /open3d-learning/data_transfer/ply2stl.py
 '''
 
@@ -44,6 +44,9 @@ def ply_to_stl(ply_file, stl_file):
       
     # 估计法线 bugfix: [OrientNormalsToAlignWithDirection] No normals in the PointCloud. Call EstimateNormals() first.
     pcd.estimate_normals()  
+
+    # 强制对齐法线方向  
+    pcd.orient_normals_to_align_with_direction([0, 0, 1]) # 将点云对齐到z轴方向  
          
     # 计算法线  
     pcd.orient_normals_to_align_with_direction([0, 0, 1])  # 将法线对齐到z轴  
@@ -53,7 +56,8 @@ def ply_to_stl(ply_file, stl_file):
     # 创建三角网格
     mesh = o3d.geometry.TriangleMesh()
     mesh.vertices = o3d.utility.Vector3dVector(pcd.points)
-    mesh.triangles = o3d.utility.Vector3iVector([(1, 2, 3), (4, 5, 6), (7, 8, 9)])    # 这里需要填写自定义的三角形索引
+    # mesh.triangles = o3d.utility.Vector3iVector([(1, 2, 3), (4, 5, 6), (7, 8, 9)])    # 这里需要填写自定义的三角形索引
+    mesh.triangles = o3d.utility.Vector3iVector([])    # 这里需要填写自定义的三角形索引
 
 
     # 添加注释
@@ -65,7 +69,8 @@ def ply_to_stl(ply_file, stl_file):
 
 
 # 使用示例
-ply_file = '/home/hcq/pointcloud/open3d-learning/test_data/ply/conferenceRoom_1_GT.ply'   # 输入的PLY点云文件路径
+# ply_file = '/home/hcq/pointcloud/open3d-learning/test_data/ply/conferenceRoom_1_GT.ply'   # 输入的PLY点云文件路径
+ply_file = '/home/hcq/pointcloud/open3d-learning/test_data/ply/Dragon/Dragon 2.5_ply.ply'   # 输入的PLY点云文件路径
 stl_file = 'output.stl'  # 输出的STL点云文件路径
 # read_triangle_mesh(ply_file)
 
