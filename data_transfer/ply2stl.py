@@ -71,6 +71,8 @@ def ply_to_stl(ply_file, stl_file):
     # 添加注释
     mesh.paint_uniform_color([1, 0, 0])  # 设置三角网格颜色为红色
 
+    # 可视化网格
+    o3d.visualization.draw_geometries([mesh])
     # 保存为STL文件
     print(1111)
     o3d.io.write_triangle_mesh(stl_file, mesh)
