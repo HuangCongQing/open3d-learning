@@ -4,12 +4,17 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2023-12-24 23:42:35
-LastEditTime: 2023-12-25 01:44:09
+LastEditTime: 2023-12-25 19:47:14
 FilePath: /open3d-learning/data_transfer/ply2stl.py
 '''
 
 import open3d as o3d
 import numpy as np
+
+
+def get_lib_version(lib):
+    print('current open3d version: ', lib.__version__)
+    return lib.__version__
 
 # https://blog.csdn.net/u014072827/article/details/112399050
 def read_triangle_mesh(path):
@@ -71,13 +76,15 @@ def ply_to_stl(ply_file, stl_file):
     o3d.io.write_triangle_mesh(stl_file, mesh)
 
 
-# 使用示例
-# ply_file = '/home/hcq/pointcloud/open3d-learning/test_data/ply/conferenceRoom_1_GT.ply'   # 输入的PLY点云文件路径
-ply_file = '/home/hcq/pointcloud/open3d-learning/test_data/ply/Dragon/Dragon 2.5_ply.ply'   # 输入的PLY点云文件路径
-stl_file = 'output.stl'  # 输出的STL点云文件路径
-# read_triangle_mesh(ply_file)
+if __name__ == '__main__':
+    version = get_lib_version(o3d)
+    # 使用示例
+    # ply_file = '/home/hcq/pointcloud/open3d-learning/test_data/ply/conferenceRoom_1_GT.ply'   # 输入的PLY点云文件路径
+    ply_file = '/home/chongqinghuang/code/open3d-learning/test_data/ply/Dragon/Dragon 2.5_ply.ply'   # 输入的PLY点云文件路径
+    stl_file = 'output.stl'  # 输出的STL点云文件路径
+    # read_triangle_mesh(ply_file)
 
-ply_to_stl(ply_file, stl_file)
+    ply_to_stl(ply_file, stl_file)
 
 
 '''  
