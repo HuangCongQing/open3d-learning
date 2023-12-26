@@ -4,7 +4,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2023-12-24 21:36:36
-LastEditTime: 2023-12-24 22:31:55
+LastEditTime: 2023-12-26 19:38:21
 FilePath: /open3d-learning/data_transfer/txt2pcd.py
 '''
 
@@ -20,7 +20,7 @@ def get_lib_version(lib):
 
 def txt2pcd(input_path, output_path):
     # 读取txt点云文件
-    txt_point_cloud = o3d.io.read_points_from_text(input_path, format='xyzrgb')
+    txt_point_cloud = o3d.io.read_point_cloud(input_path, format='xyzrgb')
     # 保存为pcd点云文件
     o3d.io.write_point_cloud(output_path, txt_point_cloud)
 
