@@ -4,7 +4,7 @@
  * @Company(School): UCAS
  * @Email: 1756260160@qq.com
  * @Date: 2023-08-10 15:40:07
- * @LastEditTime: 2023-12-24 16:56:16
+ * @LastEditTime: 2023-12-26 19:55:30
  * @FilePath: /open3d-learning/README.md
 -->
 # open3d-learning(python)
@@ -61,6 +61,18 @@ Tips:
 
 
 ### 3 点云数据格式转换(bag|.pcd|.bin|.ply|.txt|.npy|.las|.stl|.obj)）
+
+在Open3D库中，`read_point_cloud`函数支持读取多种点云文件格式，包括但不限于以下格式：
+
+1. PLY (Polygon File Format)：PLY是一种常用的点云文件格式，它可以存储三维点的坐标、颜色、法线等信息。
+2. ASCII格式：ASCII格式是一种简单的文本文件格式，用于存储三维点的坐标信息。
+3. CSV格式：CSV是一种常见的表格数据格式，可以将三维点的坐标信息以逗号分隔的形式存储在文本文件中。
+4. OFF (Object File Format)：OFF是一种用于存储三维几何数据的文件格式，可以用于存储点云数据。
+5. XYZ格式：XYZ是一种简单的文本文件格式，用于存储三维点的坐标信息。
+
+请注意，为了正确读取点云文件，需要确保文件格式与所使用的Open3D版本兼容，并且文件路径和文件名正确无误。
+
+
 * doc: https://www.yuque.com/huangzhongqing/hre6tf/ck05ki
 * code: [data_transfer](data_transfer)
 
