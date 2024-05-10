@@ -10,7 +10,7 @@
 # open3d-learning(python)
 open3d Point cloud processing and visualization(点云处理和可视化)
 
-docs: https://www.yuque.com/huangzhongqing/rx5ufe(正在撰写，暂未公开)
+docs: https://www.yuque.com/huangzhongqing/rx5ufe  (正在撰写，暂未公开)
 
 > version: **open3d==0.15.2**（不同版本的API大致相同，如果运行报错，查看你当前版本对应函数）
 
